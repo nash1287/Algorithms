@@ -1,18 +1,18 @@
 fun main() {
-    val text = "h        @#$        KJHKHKUGJ        e     l l   o    "
+    val text = "hallo"
 
-    val filteredWord = filterWhiteSpaces(text)
+    val filteredWord = filter(text,'l')
 
     println(filteredWord)
 }
 
-fun filterWhiteSpaces(text: String): String {
+fun filter(text: String, char: Char): String {
     var result = ""
 
     for (i in 0..text.lastIndex) {
-        val char = text.get(i)
-        if (char!=' ') {
-            result += char
+        val charInCycle = text.get(i)
+        if (char!=charInCycle) {
+            result += charInCycle
 
         }
     }
