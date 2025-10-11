@@ -1,18 +1,16 @@
 fun main() {
-    val text = ""
+    val numberOfChar = countChar("hello Sasnha",'n')
 
-    val numberOfA = countA(text)
-
-    println(numberOfA)
+    println(numberOfChar)
 }
 
-fun countA(text: String): Int {
+fun countChar(text: String, char: Char): Int {
     var counter = 0
 
     for (i in 0..text.lastIndex) {
-        val char = text.get(i)
+        val _char = text.get(i)
 
-        if (char == 'a') {
+        if (_char == char) {
             counter += 1
 
         }
@@ -20,3 +18,4 @@ fun countA(text: String): Int {
 
     return counter
 }
+
