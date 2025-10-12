@@ -5,13 +5,11 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun convertIntsToIntsWithChar(input: List<Int>): String {
+fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
+    val result = mutableListOf<String>()
     for (i in 0..input.lastIndex) {
-        val _char = input.get(i)
-        val expected = _char.toString()
-        val resultat = expected + "+@$_char"
-
+        val number = input.get(i)
+        result.add("$number@$number")
     }
-
-    return "actual"
+    return result
 }
