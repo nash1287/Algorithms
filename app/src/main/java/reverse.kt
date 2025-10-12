@@ -5,10 +5,10 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun reverse(stroka: String): String {
+fun reverse(input: String): String {
     var result = ""
-    for (i in stroka.lastIndex downTo 0) {
-        val char = stroka.get(i)
+    for (i in input.lastIndex downTo  0) {
+        val char = input.get(i)
         result += char
     }
 
