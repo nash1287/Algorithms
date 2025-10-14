@@ -16,11 +16,11 @@ fun main() {
 }
 
 fun indexesWithMoreSum(input: List<Int>, number: Int): String {
-    var curentSum = 0
+    var currentSum = 0
     for (i in 0..input.lastIndex) {
         val numberOfList = input.get(i)
-        curentSum += numberOfList
-        if (curentSum > number) {
+        currentSum += numberOfList
+        if (currentSum > number) {
             return "0-$i"
         }
     }
