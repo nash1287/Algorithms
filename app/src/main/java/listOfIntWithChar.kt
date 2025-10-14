@@ -9,9 +9,8 @@ fun main() {
 
 fun listOfIntWithChar(input: List<String>): List<String> {
     val list = mutableListOf<String>()
-    for (i in 0..input.lastIndex) {
-        val text = input.get(i)
-        list.add("-$text")
+    for (str in input) {
+        list.add("-$str")
     }
     return list
 }
