@@ -5,9 +5,8 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun factorial(number: Int): Long {
-    require(number >= 0)
-    var factorial = 1L
+fun factorial(number: Int): Int {
+    var factorial = 1
     for (i in 1..number) {
         factorial *= i
     }
