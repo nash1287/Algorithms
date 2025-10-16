@@ -6,10 +6,16 @@ fun main() {
 }
 
 fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
-    val result = mutableListOf<String>()
-    for (i in 0..input.lastIndex) {
-        val number = input.get(i)
-        result.add("$number@$number")
-    }
-    return result
+    val newList = input.map { "$it@$it" }
+    return newList
 }
+
+
+//fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
+//    val result = mutableListOf<String>()
+//    for (i in 0..input.lastIndex) {
+//        val number = input.get(i)
+//        result.add("$number@$number")
+//    }
+//    return result
+//}
