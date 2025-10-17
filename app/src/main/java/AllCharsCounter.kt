@@ -6,8 +6,7 @@ fun main() {
 }
 fun countChars(input: String): Map<Char, Int> {
     val map = mutableMapOf<Char, Int>()
-    for (i in input) {
-        val char = i
+    for (char in input) {
         val currentValueInMap = map.get(char)
         if (currentValueInMap == null) {
             map.put(char, 1)
