@@ -20,20 +20,6 @@ fun countChars(input: String): Map<Char, Int> {
 
 //fun countChars(input: String): Map<Char, Int> {
 //    val map = mutableMapOf<Char, Int>()
-//    for (i in input) {
-//        val char = i
-//        val currentValueInMap = map.get(char)
-//        if (currentValueInMap == null) {
-//            map.put(char, 1)
-//        } else {
-//            map.put(char, currentValueInMap + 1)
-//        }
-//    }
-//    return map
-//}
-
-//fun countChars(input: String): Map<Char, Int> {
-//    val map = mutableMapOf<Char, Int>()
 //    for (i in 0..input.lastIndex) {
 //        val char = input.get(i)
 //        val currentValueInMap = map.get(char)
