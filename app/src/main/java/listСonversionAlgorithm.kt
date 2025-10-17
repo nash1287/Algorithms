@@ -5,7 +5,7 @@ fun main() {
     println("$actual$expected")
 }
 fun listСonversionAlgorithm(input: List<Int>): List<Int> {
-    val newList = input.toMutableList().map { it+1 }
+    val newList = input.map { it+1 }
     return newList
 }
 //fun listСonversionAlgorithm(input: List<Int>): List<Int> {
