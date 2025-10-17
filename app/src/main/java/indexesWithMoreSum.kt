@@ -17,12 +17,22 @@ fun main() {
 
 fun indexesWithMoreSum(input: List<Int>, number: Int): String {
     var currentSum = 0
-    for (i in 0..input.lastIndex) {
-        val numberOfList = input.get(i)
-        currentSum += numberOfList
+    input.forEachIndexed { i, value ->
+        currentSum += value
         if (currentSum > number) {
             return "0-$i"
         }
     }
     return ""
 }
+//fun indexesWithMoreSum(input: List<Int>, number: Int): String {
+//    var currentSum = 0
+//    for (i in 0..input.lastIndex) {
+//        val numberOfList = input.get(i)
+//        currentSum += numberOfList
+//        if (currentSum > number) {
+//            return "0-$i"
+//        }
+//    }
+//    return ""
+//}
