@@ -1,3 +1,5 @@
+import android.R
+
 fun main() {
     val number1 = 9008009
     val number2 = 70080099
@@ -10,14 +12,21 @@ fun main() {
 }
 
 fun isPalindrome(number1: Int): Boolean {
-    var reverseNumber1 = ""
-    val number1Str = number1.toString()
-
-    for (i in number1Str.lastIndex downTo 0) {
-        val char = number1Str.get(i)
-        reverseNumber1 += char
+    val reversedNumber = number1.toString().reversed().toInt()
+    if (reversedNumber == number1) {
+        return true
+    } else {
+        return false
     }
-
-    return reverseNumber1 == number1Str
 }
+//    var reverseNumber1 = ""
+//    val number1Str = number1.toString()
+//
+//    for (i in number1Str.lastIndex downTo 0) {
+//        val char = number1Str.get(i)
+//        reverseNumber1 += char
+//    }
+//
+//    return reverseNumber1 == number1Str
+//}
 
