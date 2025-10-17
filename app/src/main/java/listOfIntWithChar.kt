@@ -6,11 +6,14 @@ fun main() {
     println("actual=$actual")
     println("exptected=$exptected")
 }
-
 fun listOfIntWithChar(input: List<String>): List<String> {
-    val list = mutableListOf<String>()
-    for (str in input) {
-        list.add("-$str")
-    }
-    return list
+    val newList = input.map {"-$it"}
+    return newList
 }
+//fun listOfIntWithChar(input: List<String>): List<String> {
+//    val list = mutableListOf<String>()
+//    for (str in input) {
+//        list.add("-$str")
+//    }
+//    return list
+//}
