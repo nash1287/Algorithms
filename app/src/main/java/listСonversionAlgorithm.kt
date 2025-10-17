@@ -4,13 +4,16 @@ fun main() {
     val actual = listСonversionAlgorithm(input)
     println("$actual$expected")
 }
-
 fun listСonversionAlgorithm(input: List<Int>): List<Int> {
-    var result = mutableListOf<Int>()
-    for (i in 0..input.lastIndex) {
-        var number = input.get(i)
-        result.add(number+1)
-    }
-
-    return result
+    val newList = input.toMutableList().map { it+1 }
+    return newList
 }
+//fun listСonversionAlgorithm(input: List<Int>): List<Int> {
+//    var result = mutableListOf<Int>()
+//    for (i in 0..input.lastIndex) {
+//        var number = input.get(i)
+//        result.add(number+1)
+//    }
+//
+//    return result
+//}
