@@ -8,11 +8,14 @@ fun main() {
     println("actual=$actual, expected=$expected")
 
 }
+
 fun middleArithmetic(input: List<Int>): Float {
-    val mutList = input.toMutableList()
-    val sumValueF = mutList.map { (it+it)/input.size.toFloat()
+    var digits =0
+    input.forEach {it
+        val number = it
+        digits +=number
     }
-    return 0f
+    return digits/input.size.toFloat()
 }
 //fun middleArithmetic(input: List<Int>): Float {
 //    var sum = 0
