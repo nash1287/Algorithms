@@ -10,12 +10,8 @@ fun main() {
 }
 
 fun middleArithmetic(input: List<Int>): Float {
-    var digits =0
-    input.forEach {it
-        val number = it
-        digits +=number
-    }
-    return digits/input.size.toFloat()
+
+    return input.sum()/input.size.toFloat()
 }
 //fun middleArithmetic(input: List<Int>): Float {
 //    var sum = 0
