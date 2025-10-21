@@ -28,18 +28,16 @@ fun main() {
 }
 
 fun curlybrackets(input: String): Boolean {
-    val charL = '{'
-    val charR = '}'
-    var countCharL = 0
-    var countCharR = 0
+    var counter = 0
+
     for (i in input) {
-        if (charL == i) {
-            countCharL++
-        } else if (charR == i) {
-            countCharR++
+        if (i == '{') {
+            counter++
+        } else {
+            counter--
         }
     }
-    if (countCharL == countCharR) {
+    if (counter == 0) {
         return true
     } else {
         return false
