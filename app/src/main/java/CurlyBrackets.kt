@@ -1,17 +1,17 @@
 fun main() {
-    val input = "{{}}{{}{}}{}{{}{}}"
+    val input = "{}"
     val actual = curlybrackets(input)
     val expected = true
 
-    val input1 = "{}"
+    val input1 = "{}}{"
     val actual1 = curlybrackets(input1)
     val expected1 = false
 
-    val input2 = "{{}}"
+    val input2 = "{{{}}}"
     val actual2 = curlybrackets(input2)
-    val expected2 = false
+    val expected2 = true
 
-    val input3 = "}}{{"
+    val input3 = "}{"
     val actual3 = curlybrackets(input3)
     val expected3 = false
 
@@ -35,6 +35,9 @@ fun curlybrackets(input: String): Boolean {
             counter++
         } else {
             counter--
+        }
+        if (counter<0) {
+            return false
         }
     }
     if (counter == 0) {
