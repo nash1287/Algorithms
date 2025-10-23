@@ -1,14 +1,14 @@
 fun main() {
-    val input = "а роза упала на лапу азора" // пофиг что русские буквы
+    val input = "А роза упала на лапу Азора" // пофиг что русские буквы
     val actual = isPalindromeV2(input)
     val expected = true
     println("actual=$actual expected=$expected")
 }
 
 fun isPalindromeV2(input: String): Boolean {
-    val inputIsNotWhite = input.filterNot { it.isWhitespace() }
-    val palindrome = inputIsNotWhite.reversed()
-    if (palindrome == inputIsNotWhite) {
+    val inputWithoutWhitespaces = input.lowercase().filterNot { it.isWhitespace() }
+    val reversed = inputWithoutWhitespaces.reversed()
+    if (reversed == inputWithoutWhitespaces) {
         return true
     } else {
         return false
