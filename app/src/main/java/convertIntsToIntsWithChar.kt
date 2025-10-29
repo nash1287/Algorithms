@@ -6,9 +6,15 @@ fun main() {
 }
 
 fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
-    val newList = input.map { "$it@$it" }
-    return newList
+
+    return input.map { "$it@$it" }
 }
+
+//
+//fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
+//    val newList = input.map { "$it@$it" }
+//    return newList
+//}
 
 
 //fun convertIntsToIntsWithChar(input: List<Int>): List<String> {
