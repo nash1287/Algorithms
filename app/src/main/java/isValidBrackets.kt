@@ -30,24 +30,31 @@ fun main() {
 }
 
 fun isValidBrackets(input: String): Boolean {
-    var counter = 0
+    var counterFigue = 0
+    var counterSquare = 0
+    var counterRound = 0
+
 
     for (i in 0..input.lastIndex) {
         val char = input.get(i)
         if (char == '{') {
-            counter++
-        } else if (char == '[') {
-            counter++
+            counterFigue++
+        } else if (char == '}') {
+            counterFigue--
+        }else if (char == '[') {
+            counterSquare++
+        } else if (char == ']') {
+            counterSquare--
         } else if (char == '(') {
-            counter++
-        } else {
-            counter--
+            counterRound++
+        }  else if (char == ')') {
+            counterRound--
         }
-        if (counter < 0) {
+        if (counterFigue < 0 || counterSquare<0 || counterRound<0) {
             return false
         }
     }
-    if (counter == 0) {
+    if (counterFigue == 0 && counterSquare==0 && counterRound==0) {
         return true
     } else {
         return false
