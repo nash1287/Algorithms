@@ -30,17 +30,16 @@ fun main() {
 }
 
 fun isValidBrackets(input: String): Boolean {
-    var counterFigue = 0
+    var counterFigure = 0
     var counterSquare = 0
     var counterRound = 0
 
 
-    for (i in 0..input.lastIndex) {
-        val char = input.get(i)
+    input.forEach {char->
         if (char == '{') {
-            counterFigue++
+            counterFigure++
         } else if (char == '}') {
-            counterFigue--
+            counterFigure--
         }else if (char == '[') {
             counterSquare++
         } else if (char == ']') {
@@ -50,11 +49,11 @@ fun isValidBrackets(input: String): Boolean {
         }  else if (char == ')') {
             counterRound--
         }
-        if (counterFigue < 0 || counterSquare<0 || counterRound<0) {
+        if (counterFigure < 0 || counterSquare<0 || counterRound<0) {
             return false
         }
     }
-    if (counterFigue == 0 && counterSquare==0 && counterRound==0) {
+    if (counterFigure == 0 && counterSquare==0 && counterRound==0) {
         return true
     } else {
         return false
