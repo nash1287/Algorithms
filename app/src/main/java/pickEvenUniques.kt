@@ -8,12 +8,12 @@ fun main() {
 }
 
 fun pickEvenUniques(input:List<Int>):List<Int> {
-    val sortedList = input.sorted().distinct()
-    val listUnique = mutableListOf<Int>()
-    sortedList.forEach {
-        if (!listUnique.contains(it)&& it%2 ==0) {
-            listUnique.add(it)
+    val sortedUniqueList = input.sorted().distinct()
+    val evenNumbers = mutableListOf<Int>()
+    sortedUniqueList.forEach {
+        if (it%2 ==0) {
+            evenNumbers.add(it)
         }
     }
-    return listUnique
+    return evenNumbers
 }
