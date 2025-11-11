@@ -13,7 +13,7 @@ import android.renderscript.ScriptGroup
 
 fun main() {
     // Test Case 1
-    val input1 = listOf(5, 3, 5, 2, 3, 7, 2, 8)
+    val input1 = listOf(5, 3, 5, 2, 3, 2, 7, 8)
     val actual1 = findFirstUniqueNumber(input1)
     val expected1 = 7
     println("Test 1: ${actual1 == expected1}")
@@ -22,11 +22,12 @@ fun main() {
     println("Expected: $expected1")
     println()
 }
+
 fun findFirstUniqueNumber(input: List<Int>): Int {
     val listUnique = mutableListOf<Int>()
     val listDublicate = mutableListOf<Int>()
-    for(number in input) {
-        if(!listUnique.contains(number)) {
+    for (number in input) {
+        if (!listUnique.contains(number)) {
             listUnique.add(number)
         } else {
             listDublicate.add(number)
@@ -36,7 +37,11 @@ fun findFirstUniqueNumber(input: List<Int>): Int {
         listUnique.remove(it)
     }
 
-    return listUnique.first()
+    return if (listUnique.isNotEmpty()) {
+        listUnique.first()
+    } else {
+        return throw Exception("Null")
+    }
 }
 //
 //    // Test Case 2
