@@ -13,7 +13,7 @@ fun wordCount(input: String): Map<String, Int> {
         if (number == null) {
             map.put(word, 1)
         } else {
-            map.put(word, number+1)
+            map.put(word, number + 1)
         }
     }
     return map
