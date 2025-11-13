@@ -13,7 +13,7 @@ fun median(input: List<Int>): Int {
     val isEven = (sortedList.size % 2) == 0
     val middleIndex = sortedList.lastIndex / 2
     if (isEven) {
-        return (sortedList[middleIndex] + sortedList.get(middleIndex + 1)) / 2
+        return (sortedList.get(middleIndex) + sortedList.get(middleIndex + 1)) / 2
     } else {
         return sortedList.get(middleIndex)
     }
