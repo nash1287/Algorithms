@@ -8,15 +8,15 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun findOccurrences (input: String, pattern: String): List<Int> {
+fun findOccurrences(input: String, pattern: String): List<Int> {
     val result = mutableListOf<Int>()
     var position = 0
 
     while (true) {
-        val index = input.lowercase().indexOf(pattern,position)
-        if(index==-1) break
+        val index = input.lowercase().indexOf(pattern, position)
+        if (index == -1) break
         result.add(index)
-        position=index+1
+        position = index + 1
     }
     return result
 }
