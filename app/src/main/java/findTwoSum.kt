@@ -26,6 +26,7 @@ fun main() {
     println("Expected: $expected1")
     println()
 }
+
 fun findTwoSum(input1: List<Int>, target: Int): Pair<Int, Int> {
     for (i in 0..input1.lastIndex) {
         for (j in i + 1..input1.lastIndex) {
