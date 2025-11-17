@@ -4,10 +4,14 @@ fun main() {
     val expected = "reenignEAQAolleH"
     println("actual=$actual expected=$expected")
 }
+
+
+
 fun reverse(input: String): String {
-    val reverseText = input.reversed()
-    return reverseText
+    val reversedInput = input.reversed()
+    return reversedInput
 }
+
 //fun reverse(input: String): String {
 //    var result = ""
 //    for (i in input.lastIndex downTo  0) {
