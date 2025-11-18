@@ -7,6 +7,7 @@ fun main() {
     println("actual=$actual")
     println("exptected=$exptected")
 }
+
 fun extractWords(input: String): List<String> {
     return input.map { char ->
         if (char.isDigit() || char.isWhitespace()) {
