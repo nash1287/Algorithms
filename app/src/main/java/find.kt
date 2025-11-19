@@ -12,10 +12,10 @@ fun find(input: List<Int>): List<Int> {
     val sortList = input.sorted()
     for (number in 0..input.last()) {
         if (!sortList.contains(number)) (
-            uniqueValue.add(number)
-        )
+                uniqueValue.add(number)
+                )
     }
-        return uniqueValue
+    return uniqueValue
 }
 
 //fun find(input: List<Int>): Int {
