@@ -11,14 +11,21 @@ fun main() {
     println(b2) // должно быть false
 }
 
-fun isPalindrome(number1: Int): Boolean {
-    val reversedNumber = number1.toString().reversed().toInt()
-    if (reversedNumber == number1) {
-        return true
-    } else {
-        return false
-    }
+
+fun isPalindrome(input: Int): Boolean {
+    val reversedInput = input.toString().reversed().toInt()
+    return reversedInput == input
 }
+
+
+//fun isPalindrome(number1: Int): Boolean {
+//    val reversedNumber = number1.toString().reversed().toInt()
+//    if (reversedNumber == number1) {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
 //    var reverseNumber1 = ""
 //    val number1Str = number1.toString()
 //
