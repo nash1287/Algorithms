@@ -7,18 +7,29 @@ fun main() {
 
 }
 
+
 fun median(input: List<Int>): Int {
-    val sortedList = input.sorted()
-    println(sortedList)
-    val isEven = (sortedList.size % 2) == 0
-    val middleIndex = sortedList.lastIndex / 2
+    val sortInput = input.sorted()
+    val isEven = sortInput.size % 2 == 0
     if (isEven) {
-        return (sortedList.get(middleIndex) + sortedList.get(middleIndex + 1)) / 2
+        return sortInput.get((sortInput.lastIndex/2)+1)+(sortInput.lastIndex/2)
     } else {
-        return sortedList.get(middleIndex)
+        return sortInput.get(sortInput.lastIndex/2)
     }
 
 }
+//fun median(input: List<Int>): Int {
+//    val sortedList = input.sorted()
+//    println(sortedList)
+//    val isEven = (sortedList.size % 2) == 0
+//    val middleIndex = sortedList.lastIndex / 2
+//    if (isEven) {
+//        return (sortedList.get(middleIndex) + sortedList.get(middleIndex + 1)) / 2
+//    } else {
+//        return sortedList.get(middleIndex)
+//    }
+//
+//}
 
 
 
