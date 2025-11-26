@@ -1,5 +1,7 @@
+import android.renderscript.ScriptGroup
+
 fun main() {
-    val list = listOf(46, 48, 49, 50, 49, 46, 47, 48, 500, 47, 48, 50)
+    val list = listOf(50, 48, 49, 50, 49, 46, 47, 48, 500, 47, 48, 50)
 
     val actual = middleArithmetic(list)
 
