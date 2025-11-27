@@ -1,21 +1,38 @@
+import android.renderscript.ScriptGroup
+
 fun main() {
     val input = "pogoda"
     val expected = mapOf('p' to 1, 'o' to 2, 'g' to 1, 'd' to 1, 'a' to 1)
     val actual: Map<Char, Int> = countChars(input)
     println("expected=$expected, actual=$actual")
 }
+
+
 fun countChars(input: String): Map<Char, Int> {
     val map = mutableMapOf<Char, Int>()
-    for (char in input) {
-        val currentValueInMap = map.get(char)
-        if (currentValueInMap == null) {
-            map.put(char, 1)
+    input.forEach { char->
+        val value = map.get(char)
+        if (value==null) {
+            map.put(char,1)
         } else {
-            map.put(char, currentValueInMap + 1)
+            map.put(char,value+1)
         }
     }
     return map
 }
+
+//fun countChars(input: String): Map<Char, Int> {
+//    val map = mutableMapOf<Char, Int>()
+//    for (char in input) {
+//        val currentValueInMap = map.get(char)
+//        if (currentValueInMap == null) {
+//            map.put(char, 1)
+//        } else {
+//            map.put(char, currentValueInMap + 1)
+//        }
+//    }
+//    return map
+//}
 
 //fun countChars(input: String): Map<Char, Int> {
 //    val map = mutableMapOf<Char, Int>()
