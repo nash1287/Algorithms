@@ -6,10 +6,16 @@ fun main() {
     println(filteredWord)
 }
 
-fun filter(text: String, char: Char): String {
-   val result = text.filterNot { it == char }
-    return result
-}
+
+fun filter(input: String,char: Char) {
+    val filter = input.filterNot { it==char }
+        println(filter)
+    }
+
+//fun filter(text: String, char: Char): String {
+//   val result = text.filterNot { it == char }
+//    return result
+//}
 
 //    val text = "hallo"
 //
