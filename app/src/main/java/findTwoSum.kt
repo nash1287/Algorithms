@@ -27,17 +27,20 @@ fun main() {
     println()
 }
 
-fun findTwoSum(input1: List<Int>, target: Int): Pair<Int, Int> {
-    for (i in 0..input1.lastIndex) {
-        for (j in i + 1..input1.lastIndex) {
-            if (input1.get(i) + input1.get(j) == target) {
-                return Pair(i, j)
+fun findTwoSum(input: List<Int>, target: Int): Pair<Int, Int> {
+
+    for (i in 0..input.lastIndex) {
+        for (j in i+1..input.lastIndex) {
+            if (input.get(i)+input.get(j)==target) {
+                return Pair(i,j)
             }
         }
     }
-    return throw Exception("Not Pair")
+    return throw Exception ("Not Pair")
 }
-//
+
+
+
 //    // Test Case 2
 //    val input2 = listOf(5, 2, 8, 1, 9)
 //    val target2 = 10
