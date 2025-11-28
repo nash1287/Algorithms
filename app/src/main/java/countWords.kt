@@ -9,15 +9,31 @@ fun main() {
 
 
 fun countWords(input: List<String>): Map<String, Int> {
-    val sortedList = input.sorted().map{it.lowercase()}
+    val inputLower = input.map { it.lowercase() }
+    println(inputLower)
     val map = mutableMapOf<String, Int>()
-    sortedList.forEach { str->
-        val number = map.get(str)
-        if (number==null) {
+    inputLower.forEach { str ->
+        val value = map.get(str)
+        if (value == null) {
             map.put(str, 1)
         } else {
-            map.put(str, number+1)
+            map.put(str,value+1)
         }
     }
-    return map
+    return map.toSortedMap()
 }
+
+
+//fun countWords(input: List<String>): Map<String, Int> {
+//    val sortedList = input.sorted().map{it.lowercase()}
+//    val map = mutableMapOf<String, Int>()
+//    sortedList.forEach { str->
+//        val number = map.get(str)
+//        if (number==null) {
+//            map.put(str, 1)
+//        } else {
+//            map.put(str, number+1)
+//        }
+//    }
+//    return map
+//}
