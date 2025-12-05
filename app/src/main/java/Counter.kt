@@ -1,17 +1,29 @@
 fun main() {
-    val numberOfChar = countChar("hello Sasnha", 'n')
+    val numberOfChar = countChar("helnnnnlo Sasnha", 'n')
 
     println(numberOfChar)
 }
-fun countChar(text: String, char: Char): Int {
-    var counter = 0
-    for (_char in text) {
-        if (_char == char) {
-            counter += 1
+
+
+fun countChar(input: String,char: Char) {
+    var counter=0
+    input.forEach {char->
+        if(char=='n') {
+            counter++
         }
     }
-    return counter
+    println(counter)
 }
+
+//fun countChar(text: String, char: Char): Int {
+//    var counter = 0
+//    for (_char in text) {
+//        if (_char == char) {
+//            counter += 1
+//        }
+//    }
+//    return counter
+//}
 //    val numberOfChar = countChar("hello Sasnha",'n')
 //fun countChar(text: String, char: Char): Int {
 //    var counter = 0
