@@ -1,5 +1,3 @@
-import androidx.annotation.Nullable
-
 fun main() {
     val input = "hello world hello"
     val actual = wordCount(input)
@@ -10,17 +8,31 @@ fun main() {
 fun wordCount(input: String): Map<String, Int> {
     val map = mutableMapOf<String, Int>()
     val inputSplit = input.split(" ")
-    for (word in inputSplit ) {
-        val str = map.get(word)
-        if(str==null) {
-            map.put(word,1)
-    } else {
-        map.put(word,str+1)
+    inputSplit.forEach { word ->
+        val value = map.get(word)
+        if (value == null) {
+            map.put(word, 1)
+        } else {
+            map.put(word, value + 1)
         }
-
     }
     return map
 }
+
+//fun wordCount(input: String): Map<String, Int> {
+//    val map = mutableMapOf<String, Int>()
+//    val inputSplit = input.split(" ")
+//    for (word in inputSplit ) {
+//        val str = map.get(word)
+//        if(str==null) {
+//            map.put(word,1)
+//    } else {
+//        map.put(word,str+1)
+//        }
+//
+//    }
+//    return map
+//}
 
 
 //fun wordCount(input: String): Map<String, Int> {
