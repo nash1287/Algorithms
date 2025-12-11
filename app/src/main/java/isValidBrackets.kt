@@ -30,33 +30,64 @@ fun main() {
 }
 
 fun isValidBrackets(input: String): Boolean {
-    var counterFigure = 0
-    var counterSquare = 0
-    var counterRound = 0
-
-
-    input.forEach {char->
-        if (char == '{') {
-            counterFigure++
-        } else if (char == '}') {
-            counterFigure--
-        }else if (char == '[') {
-            counterSquare++
-        } else if (char == ']') {
-            counterSquare--
-        } else if (char == '(') {
-            counterRound++
-        }  else if (char == ')') {
-            counterRound--
+    var current1 = 0
+    var current2 = 0
+    var current3 = 0
+    input.forEach { char ->
+        if (char == '(') {
+            current1++
+        } else if (char == ')') {
+            current1--
         }
-        if (counterFigure < 0 || counterSquare<0 || counterRound<0) {
+        if (char == '[') {
+            current2++
+        } else if (char == ']') {
+            current2--
+        }
+        if (char == '{') {
+            current3++
+        } else if (char == '}') {
+            current3--
+        }
+        if (current1 < 0 || current2 < 0 || current3 < 0) {
             return false
         }
     }
-    if (counterFigure == 0 && counterSquare==0 && counterRound==0) {
+    if (current1 == 0 && current2 == 0 && current3 == 0) {
         return true
     } else {
         return false
     }
 }
-
+//
+//fun isValidBrackets(input: String): Boolean {
+//    var counterFigure = 0
+//    var counterSquare = 0
+//    var counterRound = 0
+//
+//
+//    input.forEach {char->
+//        if (char == '{') {
+//            counterFigure++
+//        } else if (char == '}') {
+//            counterFigure--
+//        }else if (char == '[') {
+//            counterSquare++
+//        } else if (char == ']') {
+//            counterSquare--
+//        } else if (char == '(') {
+//            counterRound++
+//        }  else if (char == ')') {
+//            counterRound--
+//        }
+//        if (counterFigure < 0 || counterSquare<0 || counterRound<0) {
+//            return false
+//        }
+//    }
+//    if (counterFigure == 0 && counterSquare==0 && counterRound==0) {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
+//
