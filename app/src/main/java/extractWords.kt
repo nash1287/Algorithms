@@ -8,6 +8,7 @@ fun main() {
     println("exptected=$exptected")
 }
 
+
 fun extractWords(input: String): List<String> {
     return input.map { char ->
         if (char.isDigit() || char.isWhitespace()) {
@@ -17,12 +18,25 @@ fun extractWords(input: String): List<String> {
         }
     }
         .joinToString("")
-
         .split('_')
-        .filterNot {
-            it == ""
-        }
+        .filterNot { it == "" }
 }
+
+
+//fun extractWords(input: String): List<String> {
+//    return input.map { char ->
+//        if (char.isDigit() || char.isWhitespace()) {
+//            '_'
+//        } else {
+//            char
+//        }
+//    }
+//        .joinToString("")
+//        .split('_')
+//        .filterNot {
+//            it == ""
+//        }
+//}
 
 
 
