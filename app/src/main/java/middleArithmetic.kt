@@ -11,15 +11,24 @@ fun main() {
 
 }
 
-fun middleArithmetic(input: List<Int>): Float {
 
-    return input.sum()/input.size.toFloat()
+fun middleArithmetic(input: List<Int>): Float {
+    val sortInput = input.sorted()
+    val sum = sortInput.sum()
+    println(sum)
+    return (sortInput.sum()/sortInput.size).toFloat()
 }
+
+
 //fun middleArithmetic(input: List<Int>): Float {
-//    var sum = 0
-//    for (i in 0..input.lastIndex) {
-//        val number = input.get(i)
-//        sum += number
-//    }
-//    return sum / input.size.toFloat()
+//
+//    return input.sum()/input.size.toFloat()
 //}
+////fun middleArithmetic(input: List<Int>): Float {
+////    var sum = 0
+////    for (i in 0..input.lastIndex) {
+////        val number = input.get(i)
+////        sum += number
+////    }
+////    return sum / input.size.toFloat()
+////}
