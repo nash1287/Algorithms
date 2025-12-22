@@ -24,21 +24,40 @@ fun main() {
 }
 
 fun findFirstUniqueNumber(input: List<Int>): Int {
-    val inputSorted = input.sorted()
+    val inputSort = input.sorted()
     val listDublicat = mutableListOf<Int>()
     val listUnique = mutableListOf<Int>()
-    for (number in inputSorted) {
-        if (!listUnique.contains(number)) {
-            listUnique.add(number)
-        } else {
+    for (number in inputSort) {
+        if(listUnique.contains(number)) {
             listDublicat.add(number)
+        } else {
+            listUnique.add(number)
         }
     }
-    listDublicat.forEach { number->
-        listUnique.remove(number)
+    listDublicat.forEach {
+        listUnique.remove(it)
     }
     return listUnique.first()
+
 }
+
+
+//fun findFirstUniqueNumber(input: List<Int>): Int {
+//    val inputSorted = input.sorted()
+//    val listDublicat = mutableListOf<Int>()
+//    val listUnique = mutableListOf<Int>()
+//    for (number in inputSorted) {
+//        if (!listUnique.contains(number)) {
+//            listUnique.add(number)
+//        } else {
+//            listDublicat.add(number)
+//        }
+//    }
+//    listDublicat.forEach { number->
+//        listUnique.remove(number)
+//    }
+//    return listUnique.first()
+//}
 
 
 //fun findFirstUniqueNumber(input: List<Int>): Int {
