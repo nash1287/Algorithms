@@ -17,11 +17,19 @@
     println("Expected: $expected1")
     println()
 }
-fun groupProductsByCategory(input:List<Product>):Map<String, List<String>> {
+
+fun groupProductsByCategory(input: List<Product>):Map<String, List<String>> {
     return input
         .groupBy { it.category }
-        .mapValues { it.value.map { it.name } }
+        .mapValues { it.value.map{it.name} }
 }
+
+
+//fun groupProductsByCategory(input:List<Product>):Map<String, List<String>> {
+//    return input
+//        .groupBy { it.category }
+//        .mapValues { it.value.map { it.name } }
+//}
 
 //fun groupProductsByCategory(products: List<Product>): Map<String, List<String>> {
 //return products
