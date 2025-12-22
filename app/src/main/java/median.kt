@@ -1,23 +1,37 @@
 fun main() {
 
-    val list = listOf(46, 10, 49, 50, 49, 46, 47, 16, 500, 48, 19, 50, 100)
+    val list = listOf(20, 10, 15, 8, 2)
     val actual = median(list)
-    val expected = 48
+    val expected = 10
     println("actual=$actual, expected=$expected")
 
 }
 
 fun median(input: List<Int>): Int {
-    val sortList = input.sorted()
-    val middleSize = sortList.size/2
-    val middle = sortList.get(input.lastIndex/2)
-    val isEven = middleSize % 2 ==0
-    if(isEven) {
-        return (middle+1+middle)/2
+    val inputSorted = input.sorted()
+    val middle = inputSorted.size % 2
+    val middleValue = inputSorted.get(input.lastIndex/2)
+    val isEven = middle % 2 == 0
+    if (!isEven) {
+        return middleValue
     } else {
-        return middle
+        return (middleValue+1)/2
     }
+
 }
+
+
+//fun median(input: List<Int>): Int {
+//    val sortList = input.sorted()
+//    val middleSize = sortList.size/2
+//    val middle = sortList.get(input.lastIndex/2)
+//    val isEven = middleSize % 2 ==0
+//    if(isEven) {
+//        return (middle+1+middle)/2
+//    } else {
+//        return middle
+//    }
+//}
 //fun median(input: List<Int>): Int {
 //    val sortInput = input.sorted()
 //    val isEven = sortInput.size % 2 == 0
