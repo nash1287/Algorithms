@@ -5,13 +5,22 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun factorial(input: Int): Int {
+
+fun factorial(input:Int): Int {
     var factorial = 1
     for (number in 1..input) {
         factorial*=number
     }
     return factorial
 }
+
+//fun factorial(input: Int): Int {
+//    var factorial = 1
+//    for (number in 1..input) {
+//        factorial*=number
+//    }
+//    return factorial
+//}
 
 
 
