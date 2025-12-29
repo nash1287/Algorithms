@@ -6,14 +6,28 @@ fun main() {
 }
 
 fun findDuplicates(input: List<Int>): List<Int> {
-    val uniqueList = mutableListOf<Int>()
-    val dublicatesList = mutableListOf<Int>()
-    input.forEach { number ->
-        if (uniqueList.contains(number)) {
-            dublicatesList.add(number)
+    val listDublicates = mutableListOf<Int>()
+    val listUnique = mutableListOf<Int>()
+    val sortInput = input.sorted()
+    sortInput.forEach { number ->
+        if (listUnique.contains(number)) {
+            listDublicates.add(number)
         } else {
-            uniqueList.add(number)
+            listUnique.add(number)
         }
     }
-    return dublicatesList
+    return listDublicates
 }
+
+//fun findDuplicates(input: List<Int>): List<Int> {
+//    val uniqueList = mutableListOf<Int>()
+//    val dublicatesList = mutableListOf<Int>()
+//    input.forEach { number ->
+//        if (uniqueList.contains(number)) {
+//            dublicatesList.add(number)
+//        } else {
+//            uniqueList.add(number)
+//        }
+//    }
+//    return dublicatesList
+//}
