@@ -6,12 +6,19 @@ fun main() {
 }
 
 fun isPalindromeV2(input: String): Boolean {
-    val inputWithoutWhitespaces = input.lowercase().filterNot { it.isWhitespace() }
-    val reversed = inputWithoutWhitespaces.reversed()
-    if (reversed == inputWithoutWhitespaces) {
-        return true
-    } else {
-        return false
-    }
+    val inputLowerCase = input.lowercase().filterNot { it.isWhitespace() }
+    val inputLowerCaseReverse = inputLowerCase.reversed()
+    return (inputLowerCase==inputLowerCaseReverse)
 }
+
+
+//fun isPalindromeV2(input: String): Boolean {
+//    val inputWithoutWhitespaces = input.lowercase().filterNot { it.isWhitespace() }
+//    val reversed = inputWithoutWhitespaces.reversed()
+//    if (reversed == inputWithoutWhitespaces) {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
 

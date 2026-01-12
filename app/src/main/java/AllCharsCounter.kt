@@ -10,16 +10,30 @@ fun main() {
 
 fun countChars(input: String): Map<Char, Int> {
     val map = mutableMapOf<Char, Int>()
-    input.forEach { char->
+    for (char in input) {
         val value = map.get(char)
-        if (value==null) {
-            map.put(char,1)
+        if (value == null) {
+            map.put(char, 1)
         } else {
-            map.put(char,value+1)
+            map.put(char, value + 1)
         }
     }
     return map
 }
+
+
+//fun countChars(input: String): Map<Char, Int> {
+//    val map = mutableMapOf<Char, Int>()
+//    input.forEach { char->
+//        val value = map.get(char)
+//        if (value==null) {
+//            map.put(char,1)
+//        } else {
+//            map.put(char,value+1)
+//        }
+//    }
+//    return map
+//}
 
 //fun countChars(input: String): Map<Char, Int> {
 //    val map = mutableMapOf<Char, Int>()
