@@ -26,23 +26,41 @@ fun main() {
     println("input4=$input4,actual4=$actual4,expected4 = $expected4")
 
 }
+
 fun curlybrackets(input: String): Boolean {
-    var counter = 0
-    for(char in input) {
-        if (char=='{') {
-            counter++
+    var sum = 0
+    input.forEach {
+        if (it == '{') {
+            sum++
         } else {
-            counter--
+            sum--
         }
-        if (counter<0) {
+        if (sum < 0) {
             return false
         }
     }
-    if(counter % 2==0) {
-        return true
-    }
+    sum % 2 == 0
     return false
 }
+
+
+//fun curlybrackets(input: String): Boolean {
+//    var counter = 0
+//    for(char in input) {
+//        if (char=='{') {
+//            counter++
+//        } else {
+//            counter--
+//        }
+//        if (counter<0) {
+//            return false
+//        }
+//    }
+//    if(counter % 2==0) {
+//        return true
+//    }
+//    return false
+//}
 //fun curlybrackets(input: String): Boolean {
 //    var counter = 0
 //
