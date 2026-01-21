@@ -4,10 +4,16 @@ fun main() {
     val reversedNumber = reverse2(number)
     println(reversedNumber)
 }
-fun reverse2(input: Int): Int {
-    val reverseNumber = input.toString().reversed()
-    return reverseNumber.toInt()
+
+
+fun reverse2(input:Int): Int {
+    return input.toString().reversed().toInt()
 }
+
+//fun reverse2(input: Int): Int {
+//    val reverseNumber = input.toString().reversed()
+//    return reverseNumber.toInt()
+//}
 
 //fun reverse2(input: Int): Int {
 //    var reverseNumber = ""
