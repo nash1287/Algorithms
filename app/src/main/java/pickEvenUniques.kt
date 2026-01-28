@@ -10,14 +10,27 @@ fun main() {
 }
 
 fun pickEvenUniques(input: List<Int>): List<Int> {
-    val isEvenList = mutableListOf<Int>()
-    input.forEach { number ->
-        if (number % 2 == 0) {
-            isEvenList.add(number)
+    val listEvent = mutableListOf<Int>()
+    input
+        .sorted()
+        .forEach { number ->
+        if (number % 2 ==0 ) {
+            listEvent.add(number)
         }
     }
-    return isEvenList.distinct().sorted()
+    return listEvent.distinct()
 }
+
+
+//fun pickEvenUniques(input: List<Int>): List<Int> {
+//    val isEvenList = mutableListOf<Int>()
+//    input.forEach { number ->
+//        if (number % 2 == 0) {
+//            isEvenList.add(number)
+//        }
+//    }
+//    return isEvenList.distinct().sorted()
+//}
 
 
 //fun pickEvenUniques(input:List<Int>):List<Int> {
