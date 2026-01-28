@@ -7,16 +7,27 @@ fun main() {
 //    0,1,1,2,3,5,8,13
 
 
-fun fibonacci(input:Int): Int {
+fun fibonacci(input: Int):Int {
     val list = mutableListOf<Int>(0,1)
     while (list.size<input+1) {
-        val previos = list.get(list.lastIndex-1)
-        val last = list.get(list.lastIndex)
-        list.add(last+previos)
+        val previosNumber = list.get(list.lastIndex-1)
+        val lastNumber = list.get(list.lastIndex)
+        list.add(previosNumber+lastNumber)
     }
     return list.last()
-
 }
+
+
+//fun fibonacci(input:Int): Int {
+//    val list = mutableListOf<Int>(0,1)
+//    while (list.size<input+1) {
+//        val previos = list.get(list.lastIndex-1)
+//        val last = list.get(list.lastIndex)
+//        list.add(last+previos)
+//    }
+//    return list.last()
+//
+//}
 
 
 //fun fibonacci(input: Int): Int {
