@@ -9,10 +9,12 @@ fun main() {
     println("exptected=$exptected")
 }
 
-
-fun listOfIntWithChar(input: List<String>): List<String> {
-    return input.map{"-$it"}
+fun listOfIntWithChar(input:List<String>): List<String> {
+    return input.map{char->"-$char"}
 }
+//fun listOfIntWithChar(input: List<String>): List<String> {
+//    return input.map{"-$it"}
+//}
 
 //fun listOfIntWithChar(input: List<String>): List<String> {
 //    val newList = input.map {"-$it"}
