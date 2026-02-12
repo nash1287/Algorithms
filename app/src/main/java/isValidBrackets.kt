@@ -30,35 +30,65 @@ fun main() {
 }
 
 fun isValidBrackets(input: String): Boolean {
-    var current1 = 0
-    var current2 = 0
-    var current3 = 0
-    input.forEach { char ->
-        if (char == '(') {
-            current1++
-        } else if (char == ')') {
-            current1--
+    var figureSum = 0
+    var roundSum = 0
+    var squareSum = 0
+    input.forEach {
+        if (it == '{') {
+            figureSum++
+        } else if (it == '}') {
+            figureSum--
         }
-        if (char == '[') {
-            current2++
-        } else if (char == ']') {
-            current2--
+        if (it == '[') {
+            squareSum++
+        } else if (it == ']') {
+            squareSum--
         }
-        if (char == '{') {
-            current3++
-        } else if (char == '}') {
-            current3--
+        if (it == '(') {
+            roundSum++
+        } else if (it == ')'){
+            roundSum--
         }
-        if (current1 < 0 || current2 < 0 || current3 < 0) {
+        if (figureSum < 0 || roundSum < 0 || squareSum < 0) {
             return false
         }
     }
-    if (current1 == 0 && current2 == 0 && current3 == 0) {
+    if (figureSum == 0 && roundSum == 0 && squareSum == 0) {
         return true
     } else {
         return false
     }
 }
+//fun isValidBrackets(input: String): Boolean {
+//    var current1 = 0
+//    var current2 = 0
+//    var current3 = 0
+//    input.forEach { char ->
+//        if (char == '(') {
+//            current1++
+//        } else if (char == ')') {
+//            current1--
+//        }
+//        if (char == '[') {
+//            current2++
+//        } else if (char == ']') {
+//            current2--
+//        }
+//        if (char == '{') {
+//            current3++
+//        } else if (char == '}') {
+//            current3--
+//        }
+//        if (current1 < 0 || current2 < 0 || current3 < 0) {
+//            return false
+//        }
+//    }
+//    if (current1 == 0 && current2 == 0 && current3 == 0) {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
 //
 //fun isValidBrackets(input: String): Boolean {
 //    var counterFigure = 0
