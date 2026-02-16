@@ -27,7 +27,6 @@ fun main() {
     println("exptected=$exptected")
 }
 
-
 fun generateFizzBuzz(input: Int): List<String> {
     val listInt = mutableListOf<Int>()
     val listString = mutableListOf<String>()
@@ -36,33 +35,44 @@ fun generateFizzBuzz(input: Int): List<String> {
     }
     listInt.forEach {
         if(it % 3 == 0 && it % 5 == 0) {
-            listString.add("FizzBuzz")
-        }
-        else if (it % 3 == 0) {
+        listString.add("FizzBuzz")
+    }
+        else if(it % 3 == 0) {
             listString.add("Fizz")
         }
         else if (it % 5 == 0) {
             listString.add("Buzz")
         }
+
         else {
             listString.add("$it")
         }
+
     }
     return listString
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+//fun generateFizzBuzz(input: Int): List<String> {
+//    val listInt = mutableListOf<Int>()
+//    val listString = mutableListOf<String>()
+//    for (number in 1..input) {
+//        listInt.add(number)
+//    }
+//    listInt.forEach {
+//        if(it % 3 == 0 && it % 5 == 0) {
+//            listString.add("FizzBuzz")
+//        }
+//        else if (it % 3 == 0) {
+//            listString.add("Fizz")
+//        }
+//        else if (it % 5 == 0) {
+//            listString.add("Buzz")
+//        }
+//        else {
+//            listString.add("$it")
+//        }
+//    }
+//    return listString
+//}
 
 
 //fun generateFizzBuzz(n: Int): List<String> {
