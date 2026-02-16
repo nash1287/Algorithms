@@ -9,17 +9,28 @@ fun main() {
     println("actual=$actual expected=$expected")
 }
 
-fun pickEvenUniques(input: List<Int>): List<Int> {
-    val listEvent = mutableListOf<Int>()
-    input
-        .sorted()
-        .forEach { number ->
-        if (number % 2 ==0 ) {
-            listEvent.add(number)
+fun pickEvenUniques(input:List<Int>): List<Int> {
+    val sortList = input.sorted()
+    val isEvenList = mutableListOf<Int>()
+    sortList.forEach {
+        if(it%2==0) {
+            isEvenList.add(it)
         }
     }
-    return listEvent.distinct()
+    return isEvenList.distinct()
 }
+
+//fun pickEvenUniques(input: List<Int>): List<Int> {
+//    val listEvent = mutableListOf<Int>()
+//    input
+//        .sorted()
+//        .forEach { number ->
+//        if (number % 2 ==0 ) {
+//            listEvent.add(number)
+//        }
+//    }
+//    return listEvent.distinct()
+//}
 
 
 //fun pickEvenUniques(input: List<Int>): List<Int> {
